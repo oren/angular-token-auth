@@ -2,22 +2,20 @@
 
 Example of Token-based authentication in [AngularJS](http://angularjs.org) with [Express](http://expressjs.com). 
 
-### Build and Run
+## Run with Docker
 
-First, install dependencies using npm:
+    fig up
+    curl -i -H 'Content-Type: application/json' -d '{"username": "john.doe", "password": "foobar"}' "localhost:8080/authenticate"
+    verify here: http://jwt.io   secret: this is the secret secret secret 12356
+
+### Run without Docker
 
 ```sh
 npm install
-```
-
-Run the example:
-
-```sh
 node auth.server.js
 ```
 
 and go to [localhost:8080](http://localhost:8080).
- 
  
 ### More advanced scenarios?
 
@@ -35,8 +33,3 @@ If you have found a bug or if you have a feature request, please report them at 
 
 This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
-## Run with Docker
-
-    fig up
-    curl -i -H 'Content-Type: application/json' -d '{"username": "john.doe", "password": "foobar"}' "localhost:8080/authenticate"
-    verify here: http://jwt.io   secret: this is the secret secret secret 12356/
