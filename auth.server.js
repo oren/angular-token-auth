@@ -9,7 +9,8 @@ var secret = 'this is the secret secret secret 12356';
 
 var app = express();
 
-// We are going to protect /api routes with JWT
+// We are going to protect /api routes with JWT. 
+// jwt.verify() is called inside this middleware - https://github.com/auth0/express-jwt/blob/master/lib/index.js#L61 
 app.use('/api', expressJwt({secret: secret}));
 
 app.use(bodyParser.json());
