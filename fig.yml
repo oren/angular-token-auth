@@ -1,0 +1,7 @@
+app:
+  build: .
+  command: ["bin/install_and_start"]
+  volumes:
+   - .:/home/developer
+  ports: 
+   - "8080:8080"
